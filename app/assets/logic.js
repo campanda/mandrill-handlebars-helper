@@ -2,15 +2,13 @@ $(document).ready(function () {
     var storedFormValues = sessionStorage.getItem('storedFormValues');
     if (storedFormValues) {
         var parsedStoredFormValues = JSON.parse(storedFormValues);
-        $("#bodyFile").val(parsedStoredFormValues.bodyFile);
-        $("#contentFile").val(parsedStoredFormValues.contentFile);
+        $("#templateFile").val(parsedStoredFormValues.templateFile);
         $("#jsonFile").val(parsedStoredFormValues.jsonFile);
     }
     $("#uploadForm").on('submit', function (e) {
         e.preventDefault();
         sessionStorage.setItem('storedFormValues', JSON.stringify({
-            bodyFile: $("#bodyFile").val(),
-            contentFile: $("#contentFile").val(),
+            templateFile: $("#templateFile").val(),
             jsonFile: $("#jsonFile").val()
         }));
         $.post('http://localhost:20755/updateConfig', $("#uploadForm").serialize(), function () {
@@ -23,7 +21,7 @@ $(document).ready(function () {
         open($(this).attr("href"));
     });
 
-    $("#bodyFile, #contentFile, #jsonFile").on("drop", function (e) {
+    $("#templateFile, #jsonFile").on("drop", function (e) {
         e.preventDefault();
         e.stopImmediatePropagation();
         e.preventDefault();
