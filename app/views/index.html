@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mandrill Handlebars Helper</title>
+    <title>Mandril Manager - Check</title>
     <link rel="stylesheet" href="../assets/style.css"/>
     <link rel="icon" href="//handlebarsjs.com/images/favicon.png"/>
     <script>window.$ = window.jQuery = require('jquery');</script>
@@ -10,28 +10,23 @@
 </head>
 <body>
 <header>
-    Mandrill Handlebars Helper
+    Mandril Manager - Check
 </header>
 <div id="content">
     <form action="#" id="uploadForm">
         <div class="inputGroup">
-            <label for="bodyFile">Body html file</label>
-            <input type="text" id="bodyFile" name="bodyFile" placeholder="Drag a html file to this input box"/>
-            <div class="inputDescription">Optional. If provided the body template must contain {{> content }}</div>
+            <label for="htmlFile">Template</label>
+            <input type="text" id="contentFile" name="contentFile" required placeholder="Drag a html or txt file to this input box"/>
         </div>
         <div class="inputGroup">
-            <label for="htmlFile">Content html file</label>
-            <input type="text" id="contentFile" name="contentFile" required placeholder="Drag a html file to this input box"/>
-        </div>
-        <div class="inputGroup">
-            <label for="jsonFile">JSON file</label>
+            <label for="jsonFile">JSON</label>
             <input type="text" id="jsonFile" name="jsonFile" required placeholder="Drag a json file to this input box"/>
         </div>
-        <input type="submit" value="Start" id="start"/>
+        <input type="submit" value="Check" id="start"/>
     </form>
 </div>
 <footer>
-    &copy;2016 <a href="https://braham.biz" target="_blank">Steven Braham</a> | <a href="https://github.com/stevenbraham/mandrill-handlebars-helper" target="_blank">Github</a>
+    <a href="https://campanda.com" target="_blank">Campanda</a> | <a href="https://github.com/campanda/mandrill-handlebars-helper" target="_blank">Github</a>
 </footer>
 <script src="../assets/logic.js"></script>
 </body>
