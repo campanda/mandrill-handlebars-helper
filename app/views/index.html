@@ -10,19 +10,19 @@
 </head>
 <body>
 <header>
-    Mandrill Manager - Check
+    Mandrill Manager - Local Preview
 </header>
 <div id="content">
     <form action="#" id="uploadForm">
         <div class="inputGroup">
-            <label for="templateFile">Template</label>
-            <input type="text" id="templateFile" name="templateFile" required placeholder="Drag a html or txt file from the out directory to this input box"/>
+            <label for="templateFile">Mandrill Template (HTML or TXT)</label>
+            <input type="text" id="templateFile" name="templateFile" required placeholder="Drag a .html or .txt file from the templates/out directory to this input box"/>
         </div>
         <div class="inputGroup">
-            <label for="jsonFile">JSON</label>
-            <input type="text" id="jsonFile" name="jsonFile" required placeholder="Drag a json file from the in directory to this input box"/>
+            <label for="jsonFile">Transaction Data (JSON)</label>
+            <input type="text" id="jsonFile" name="jsonFile" required placeholder="Drag a .json file from the templates/in directory to this input box"/>
         </div>
-        <input type="submit" value="Check" id="start"/>
+        <input type="submit" value="Preview" id="start"/>
     </form>
 </div>
 <footer>
